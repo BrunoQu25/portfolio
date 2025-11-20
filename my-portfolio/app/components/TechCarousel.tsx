@@ -11,7 +11,6 @@ export default function TechCarousel() {
                 </svg>
             )
         },
-        
         {
             name: 'Python',
             logo: (

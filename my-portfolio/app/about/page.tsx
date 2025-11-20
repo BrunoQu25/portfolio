@@ -203,13 +203,13 @@ export default function About() {
                         </div>
                         <span className="text-zinc-400 m-6">Feel free to reach out for collaborations or just a friendly chat.</span>
                         <div className="flex justify-center items-center m-6 gap-4">
-                            <div className="btn-gradient">
-                                <button>
+                            <Link href="/work" className="btn-gradient">
+                                <button className="hover:cursor-pointer">
                                 Check my work
                                 </button>
-                            </div>
+                            </Link>
                             <Link href="/contact" className="btn-gradient">
-                                <button>
+                                <button className="hover:cursor-pointer">
                                     Contact me
                                 </button>
                             </Link>

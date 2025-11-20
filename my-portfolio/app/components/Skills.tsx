@@ -1,6 +1,7 @@
 'use client';
 
 import { JSX, useState } from 'react';
+import { technologies } from '../context/context';
 
 interface Skill {
   name: string;
@@ -59,10 +60,10 @@ export default function Skills() {
         </svg>
       ),
       skills: [
-        { name: 'Node.js', level: 80 },
-        { name: 'Express.js', level: 80 },
-        { name: 'ASP.NET Core', level: 80 },
-        { name: 'Flask', level: 60 },
+        { name: technologies.find(t => t.name === "Node.js")?.name || "Node.js", level: 80 },
+        { name: technologies.find(t => t.name === "Express.js")?.name || "Express.js", level: 80 },
+        { name: technologies.find(t => t.name === "ASP.NET Core")?.name || "ASP.NET Core", level: 80 },
+        { name: technologies.find(t => t.name === "Flask")?.name || "Flask", level: 60 },
       ],
     },
     {
@@ -161,22 +162,37 @@ export default function Skills() {
 
             {/* Expanded Content */}
             {expandedCategory === category.title && (
-              <div className="px-6 pb-6 space-y-4">
-                {category.skills.map((skill) => (
-                  <div key={skill.name} className="flex items-center gap-4">
-                    <div className="flex items-center gap-3 w-40">
-                      <span className="text-sm text-white font-medium">
+              <div className="px-6 pb-6">
+                <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-4">
+                  {category.skills.map((skill) => (
+                    <div 
+                      key={skill.name} 
+                      className="relative flex flex-col items-center justify-center p-4 bg-zinc-800/50 rounded-xl hover:bg-zinc-800 transition-all duration-300 group cursor-pointer overflow-hidden"
+                    >
+                      {/* Gradient overlay on hover */}
+                      <div className="absolute inset-0 bg-gradient-to-br from-green-500/20 to-blue-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl" />
+                      
+                      <div className="relative z-10 w-12 h-12 mb-3 flex items-center justify-center">
+                        {skill.icon ? (
+                          <img 
+                            src={skill.icon} 
+                            alt={skill.name} 
+                            className="w-full h-full object-contain"
+                          />
+                        ) : (
+                          <div className="w-full h-full bg-gradient-to-br from-cyan-400 to-cyan-600 rounded-lg flex items-center justify-center">
+                            <span className="text-white font-bold text-lg">
+                              {skill.name.charAt(0)}
+                            </span>
+                          </div>
+                        )}
+                      </div>
+                      <span className="relative z-10 text-xs text-zinc-300 text-center font-medium group-hover:text-white transition-colors">
                         {skill.name}
                       </span>
                     </div>
-                    <div className="flex-1 h-2 bg-zinc-800 rounded-full overflow-hidden">
-                      <div
-                        className="h-full bg-gradient-to-r from-cyan-400 to-cyan-600 rounded-full transition-all duration-500"
-                        style={{ width: `${skill.level}%` }}
-                      />
-                    </div>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
             )}
           </div>

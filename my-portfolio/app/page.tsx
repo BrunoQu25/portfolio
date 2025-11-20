@@ -1,5 +1,6 @@
 'use client';
 
+import Link from "next/link";
 import Circle from "./animations/circle";
 import TechCarousel from "./components/TechCarousel";
 
@@ -28,16 +29,20 @@ export default function Home() {
           <TechCarousel />
         </div>
         <div className="mt-4 text-lg text-zinc-600 dark:text-zinc-400 flex gap-4">
-          <div className="btn-gradient">
-            <button>
-              More about me
-            </button>
-          </div>
-          <div className="btn-gradient">
-            <button>
-              Check my work
-            </button>
-          </div>
+          <Link href="/about">
+            <div className="btn-gradient">
+              <button className="hover:cursor-pointer">
+                More about me
+              </button>
+            </div>
+          </Link>
+          <Link href="/work">
+            <div className="btn-gradient">
+              <button className="hover:cursor-pointer">
+                Check my work
+              </button>
+            </div>
+          </Link>
         </div>
       </main>
     </div>
