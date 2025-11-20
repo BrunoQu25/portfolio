@@ -50,7 +50,7 @@ export default function Contact() {
     };
 
     return (
-        <main className="flex min-h-screen flex-col items-center justify-center px-8 py-16">
+        <main className="flex min-h-screen flex-col items-center justify-center px-8 py-16 sm:py-20">
             <h1 className="mb-8 text-3xl font-light text-zinc-400 text-center">
                 Do you have an idea? Let's make it real together!
             </h1>

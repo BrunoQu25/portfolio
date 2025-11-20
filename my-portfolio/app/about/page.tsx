@@ -42,8 +42,8 @@ export default function About() {
                 </ul>
             </nav>
 
-            <main className="flex flex-col w-full max-w-6xl px-6 py-20">
-                
+            <main className="relative z-10 flex flex-col w-full max-w-6xl px-4 py-12 sm:px-6 sm:py-16 lg:py-20">
+
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-12 w-full">
 
                     <div className="col-span-1 flex flex-col items-center">
@@ -102,32 +102,32 @@ export default function About() {
                                 </button>
                             </a>
 
-                        <h1 className="text-4xl font-bold dark:text-zinc-50 mt-2">Bruno Quadrelli</h1>
-                        <h2 className="mt-2 text-2xl text-zinc-700 dark:text-zinc-400 mb-4">
-                            <TypewriterText 
-                                texts={[
-                                    "Full Stack Developer",
-                                    "Backend Developer",
-                                    "Frontend Developer",
-                                    "Cloud Technologies Experience",
-                                    "Problem Solver",
-                                    "Innovative Solutions Creator",
-                                    "Software Engineer student"
-                                ]}
-                                typingSpeed={100}
-                                deletingSpeed={50}
-                                pauseDuration={2000}
-                            />
-                        </h2>
+                            <h1 className="text-3xl sm:text-4xl font-bold dark:text-zinc-50 mt-2">Bruno Quadrelli</h1>
+                            <h2 className="mt-2 text-xl sm:text-2xl text-zinc-700 dark:text-zinc-400 mb-4">
+                                <TypewriterText
+                                    texts={[
+                                        "Full Stack Developer",
+                                        "Backend Developer",
+                                        "Frontend Developer",
+                                        "Cloud Technologies Experience",
+                                        "Problem Solver",
+                                        "Innovative Solutions Creator",
+                                        "Software Engineer student"
+                                    ]}
+                                    typingSpeed={100}
+                                    deletingSpeed={50}
+                                    pauseDuration={2000}
+                                />
+                            </h2>
 
-                        <SocialMedia />
+                            <SocialMedia />
 
-                        <p className="mt-6 text-lg text-zinc-600 dark:text-zinc-400 leading-relaxed">
-                            I am a developer passionate about building comfortable and meaningful digital
-                            experiences. I enjoy solving real-world problems and crafting the best solutions
-                            possible. My goal is to continously learn and improve so I can deliver
-                            high-quality projects that exceed expectations.
-                        </p>
+                            <p className="mt-6 text-base sm:text-lg text-zinc-600 dark:text-zinc-400 leading-relaxed">
+                                I am a developer passionate about building comfortable and meaningful digital
+                                experiences. I enjoy solving real-world problems and crafting the best solutions
+                                possible. My goal is to continously learn and improve so I can deliver
+                                high-quality projects that exceed expectations.
+                            </p>
                         </div>
 
                         <section id="work-experience" className="mt-10">
@@ -205,7 +205,7 @@ export default function About() {
                         <div className="flex justify-center items-center m-6 gap-4">
                             <Link href="/work" className="btn-gradient">
                                 <button className="hover:cursor-pointer">
-                                Check my work
+                                    Check my work
                                 </button>
                             </Link>
                             <Link href="/contact" className="btn-gradient">
