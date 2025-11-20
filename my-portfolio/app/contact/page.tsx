@@ -93,8 +93,6 @@ export default function Contact() {
                         <SocialMedia />
                     </div>
                 </div>
-
-                {/* Right side - Contact Form */}
                 <div className="bg-transparent">
                     <h2 className="text-4xl font-bold text-white mb-4">Send me a message</h2>
                     <p className="text-zinc-400 mb-8">Tell me about your project</p>

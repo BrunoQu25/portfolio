@@ -12,6 +12,36 @@ import Skills from '../components/Skills';
 export default function About() {
     return (
         <div className="flex mt-8 min-h-screen justify-center font-sans">
+            {/* Left Sidebar Navigation */}
+            <nav className="hidden lg:block fixed left-8 top-1/2 -translate-y-1/2 w-48">
+                <ul className="space-y-4 text-zinc-400">
+                    <li>
+                        <a href="#introduction" className="hover:text-white transition-colors flex items-center gap-2">
+                            <span className="text-2xl">—</span>
+                            <span>Introduction</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#work-experience" className="hover:text-white transition-colors flex items-center gap-2">
+                            <span className="text-2xl">—</span>
+                            <span>Work Experience</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#education" className="hover:text-white transition-colors flex items-center gap-2">
+                            <span className="text-2xl">—</span>
+                            <span>Education</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#skills" className="hover:text-white transition-colors flex items-center gap-2">
+                            <span className="text-2xl">—</span>
+                            <span>Technical Skills</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
             <main className="flex flex-col w-full max-w-6xl px-6 py-20">
                 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-12 w-full">
@@ -59,19 +89,20 @@ export default function About() {
                     </div>
 
                     <div className="col-span-2 flex flex-col">
-                        <a href="https://calendly.com/bruqua/30min" target="_blank" rel="noopener noreferrer" className="btn-gradient mb-6 w-fit">
-                            <button>
-                                <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                                </svg>
-                                <span>Schedule a call</span>
-                                <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                                </svg>
-                            </button>
-                        </a>
+                        <div id="introduction">
+                            <a href="https://calendly.com/bruqua/30min" target="_blank" rel="noopener noreferrer" className="btn-gradient mb-6 w-fit">
+                                <button>
+                                    <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                    </svg>
+                                    <span>Schedule a call</span>
+                                    <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                                    </svg>
+                                </button>
+                            </a>
 
-                        <h1 className="text-4xl font-bold dark:text-zinc-50">Bruno Quadrelli</h1>
+                        <h1 className="text-4xl font-bold dark:text-zinc-50 mt-2">Bruno Quadrelli</h1>
                         <h2 className="mt-2 text-2xl text-zinc-700 dark:text-zinc-400 mb-4">
                             <TypewriterText 
                                 texts={[
@@ -92,13 +123,14 @@ export default function About() {
                         <SocialMedia />
 
                         <p className="mt-6 text-lg text-zinc-600 dark:text-zinc-400 leading-relaxed">
-                            I am a developer passionate about building comfortable and useful digital
+                            I am a developer passionate about building comfortable and meaningful digital
                             experiences. I enjoy solving real-world problems and crafting the best solutions
-                            possible. My goal is to continuously learn and improve so I can deliver
-                            high-quality work that exceeds expectations.
+                            possible. My goal is to continously learn and improve so I can deliver
+                            high-quality projects that exceed expectations.
                         </p>
+                        </div>
 
-                        <section className="mt-10">
+                        <section id="work-experience" className="mt-10">
                             <h1 className="text-2xl font-bold dark:text-zinc-50 mb-4">Work Experience</h1>
 
                             {[
@@ -140,7 +172,7 @@ export default function About() {
                             ))}
                         </section>
 
-                        <section className="mt-10 space-y-6">
+                        <section id="education" className="mt-10 space-y-6">
                             <h1 className="text-2xl font-bold dark:text-zinc-50 mb-4">Education</h1>
 
                             {[
@@ -157,7 +189,7 @@ export default function About() {
                                 </div>
                             ))}
                         </section>
-                        <section className="mt-10 mb-4">
+                        <section id="skills" className="mt-10 mb-4">
                             <h1 className="text-2xl font-bold dark:text-zinc-50 mb-4">Skills</h1>
                             <Skills />
                         </section>
