@@ -5,7 +5,8 @@ import { motion } from "framer-motion";
 export default function AnimatedBackground() {
   return (
     <div className="fixed inset-0 -z-10 overflow-hidden">
-      
+      {/* Animated gradient background */}
+      <div className="absolute inset-0 via-zinc-900">
         {/* Geometric network pattern */}
         <svg className="absolute inset-0 w-full h-full opacity-50">
           <defs>
@@ -102,5 +103,6 @@ export default function AnimatedBackground() {
           />
         </svg>
       </div>
+    </div>
   );
 }
