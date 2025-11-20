@@ -14,10 +14,28 @@
   /* ✅ Add your custom animation here */
   @keyframes scroll {
     0% { transform: translateX(0); }
-    100% { transform: translateX(-250%); }
+    100% { transform: translateX(calc(-100% / 3)); }
   }
 
-  --animate-scroll: scroll 20s linear infinite;
+  @keyframes rocket {
+    0% {
+      transform: translateX(-50px) translateY(0);
+      opacity: 0;
+    }
+    5% {
+      opacity: 1;
+    }
+    95% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(calc(100vw + 50px)) translateY(0);
+      opacity: 0;
+    }
+  }
+
+  --animate-scroll: scroll 30s linear infinite;
+  --animate-rocket: rocket 8s ease-in-out infinite;
 }
 
 @media (prefers-color-scheme: dark) {

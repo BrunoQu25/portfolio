@@ -1,4 +1,8 @@
+'use client';
+
 import Image from 'next/image';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
 import SocialMedia from '../components/socialMedia';
 import Certification from '../components/Certification';
 import TechCarousel from '../components/TechCarousel';
@@ -7,8 +11,8 @@ import Skills from '../components/Skills';
 
 export default function About() {
     return (
-        <div className="flex mt-8 min-h-screen justify-center bg-zinc-50 dark:bg-black font-sans">
-            <main className="flex flex-col w-full max-w-6xl px-6 py-20 bg-white dark:bg-black">
+        <div className="flex mt-8 min-h-screen justify-center font-sans">
+            <main className="flex flex-col w-full max-w-6xl px-6 py-20">
                 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-12 w-full">
 
@@ -55,7 +59,7 @@ export default function About() {
                     </div>
 
                     <div className="col-span-2 flex flex-col">
-                        <div className="btn-gradient mb-6 w-fit">
+                        <a href="https://calendly.com/bruqua/30min" target="_blank" rel="noopener noreferrer" className="btn-gradient mb-6 w-fit">
                             <button>
                                 <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
@@ -65,7 +69,7 @@ export default function About() {
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                                 </svg>
                             </button>
-                        </div>
+                        </a>
 
                         <h1 className="text-4xl font-bold dark:text-zinc-50">Bruno Quadrelli</h1>
                         <h2 className="mt-2 text-2xl text-zinc-700 dark:text-zinc-400 mb-4">
@@ -160,8 +164,8 @@ export default function About() {
                     </div>
                 </div>
 
-                <div className="w-full mt-16">
-                    <div className="border border-zinc-700 rounded-2xl bg-zinc-900/50 overflow-hidden max-w-3xl mx-auto">
+                <div className="w-full mt-16 relative">
+                    <div className="border border-zinc-700 rounded-2xl bg-zinc-900/50 overflow-hidden max-w-3xl mx-auto relative z-10">
                         <div className="flex items-center gap-6">
                             <span className="text-2xl font-bold dark:text-zinc-50 m-6">Let&apos;s Connect!</span>
                         </div>
@@ -172,11 +176,11 @@ export default function About() {
                                 Check my work
                                 </button>
                             </div>
-                            <div className="btn-gradient">
+                            <Link href="/contact" className="btn-gradient">
                                 <button>
-                                Connect
+                                    Contact me
                                 </button>
-                            </div>
+                            </Link>
                         </div>
                     </div>
                 </div>
