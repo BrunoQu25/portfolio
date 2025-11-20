@@ -6,9 +6,9 @@ export default function AnimatedBackground() {
   return (
     <div className="fixed inset-0 -z-10 overflow-hidden">
       {/* Animated gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-green-500/20 via-zinc-950 to-blue-500/20">
+      <div className="absolute inset-0 bg-gradient-to-br from-green-500/30 via-zinc-900 to-blue-500/30">
         {/* Geometric network pattern */}
-        <svg className="absolute inset-0 w-full h-full opacity-40">
+        <svg className="absolute inset-0 w-full h-full opacity-50">
           <defs>
             <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="100%">
               <stop offset="0%" stopColor="#22C55E" />
