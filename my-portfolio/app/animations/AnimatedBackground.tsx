@@ -6,9 +6,9 @@ export default function AnimatedBackground() {
   return (
     <div className="fixed inset-0 -z-10 overflow-hidden">
       {/* Animated gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-green-500/10 via-black to-blue-500/10">
+      <div className="absolute inset-0 bg-gradient-to-br from-green-500/20 via-zinc-950 to-blue-500/20">
         {/* Geometric network pattern */}
-        <svg className="absolute inset-0 w-full h-full opacity-30">
+        <svg className="absolute inset-0 w-full h-full opacity-40">
           <defs>
             <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="100%">
               <stop offset="0%" stopColor="#22C55E" />
@@ -16,56 +16,56 @@ export default function AnimatedBackground() {
             </linearGradient>
           </defs>
           {/* Animated lines */}
-          <motion.line 
-            x1="10%" y1="10%" x2="40%" y2="30%" 
-            stroke="url(#lineGradient)" 
+          <motion.line
+            x1="10%" y1="10%" x2="40%" y2="30%"
+            stroke="url(#lineGradient)"
             strokeWidth="1"
             initial={{ pathLength: 0, opacity: 0 }}
             animate={{ pathLength: 1, opacity: 1 }}
             transition={{ duration: 2, repeat: Infinity, repeatType: "reverse" }}
           />
-          <motion.line 
-            x1="40%" y1="30%" x2="70%" y2="20%" 
-            stroke="url(#lineGradient)" 
+          <motion.line
+            x1="40%" y1="30%" x2="70%" y2="20%"
+            stroke="url(#lineGradient)"
             strokeWidth="1"
             initial={{ pathLength: 0, opacity: 0 }}
             animate={{ pathLength: 1, opacity: 1 }}
             transition={{ duration: 2.5, repeat: Infinity, repeatType: "reverse", delay: 0.5 }}
           />
-          <motion.line 
-            x1="70%" y1="20%" x2="90%" y2="40%" 
-            stroke="url(#lineGradient)" 
+          <motion.line
+            x1="70%" y1="20%" x2="90%" y2="40%"
+            stroke="url(#lineGradient)"
             strokeWidth="1"
             initial={{ pathLength: 0, opacity: 0 }}
             animate={{ pathLength: 1, opacity: 1 }}
             transition={{ duration: 2.2, repeat: Infinity, repeatType: "reverse", delay: 1 }}
           />
-          <motion.line 
-            x1="20%" y1="60%" x2="50%" y2="70%" 
-            stroke="url(#lineGradient)" 
+          <motion.line
+            x1="20%" y1="60%" x2="50%" y2="70%"
+            stroke="url(#lineGradient)"
             strokeWidth="1"
             initial={{ pathLength: 0, opacity: 0 }}
             animate={{ pathLength: 1, opacity: 1 }}
             transition={{ duration: 2.8, repeat: Infinity, repeatType: "reverse", delay: 0.3 }}
           />
-          <motion.line 
-            x1="50%" y1="70%" x2="80%" y2="80%" 
-            stroke="url(#lineGradient)" 
+          <motion.line
+            x1="50%" y1="70%" x2="80%" y2="80%"
+            stroke="url(#lineGradient)"
             strokeWidth="1"
             initial={{ pathLength: 0, opacity: 0 }}
             animate={{ pathLength: 1, opacity: 1 }}
             transition={{ duration: 2.3, repeat: Infinity, repeatType: "reverse", delay: 0.8 }}
           />
-          <motion.line 
-            x1="30%" y1="40%" x2="60%" y2="60%" 
-            stroke="url(#lineGradient)" 
+          <motion.line
+            x1="30%" y1="40%" x2="60%" y2="60%"
+            stroke="url(#lineGradient)"
             strokeWidth="1"
             initial={{ pathLength: 0, opacity: 0 }}
             animate={{ pathLength: 1, opacity: 1 }}
             transition={{ duration: 2.6, repeat: Infinity, repeatType: "reverse", delay: 1.2 }}
           />
           {/* Connection nodes */}
-          <motion.circle cx="10%" cy="10%" r="3" fill="#22C55E" 
+          <motion.circle cx="10%" cy="10%" r="3" fill="#22C55E"
             animate={{ scale: [1, 1.5, 1], opacity: [0.5, 1, 0.5] }}
             transition={{ duration: 2, repeat: Infinity }}
           />
