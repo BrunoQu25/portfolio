@@ -165,7 +165,7 @@ export const projects: Project[] = [
         "CI/CD Pipeline Automation",
         "Project focused on agile methodologies and DevOps practices.",
         "This project was done for ORT University as part of my Software Engineer career. It involved creating an automated CI/CD pipeline using GitHub Actions and Docker to streamline the building process for web applications. The pipeline included automated testing and building.",
-        ["/projects/CI-CD/pharmago.png"],
+        ["/projects/CI-CD/pharmaGo.png"],
         null,
         "https://github.com/IngSoft-ISA2-2024-2/N7A-Corrotti-Quadrelli-Ribarov",
         [github_actions, docker, aspnetcore, angular, sqlserver]
